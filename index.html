@@ -21,11 +21,9 @@
 
       <!-- Updated: multi-page nav (no #anchors) -->
       <nav class="links" aria-label="Primary">
-        <a href="about.html">About</a>
-        <a href="research.html">Research</a>
-        <a href="data.html">Data</a>
-        <a href="publications.html">Publications</a>
-        <a href="contact.html">Contact</a>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -45,8 +43,8 @@
 
           <!-- Updated: CTAs now point to pages -->
           <div class="cta">
-            <a class="btn" href="research.html">Explore Research</a>
-            <a class="btn btn--secondary" href="data.html">View Datasets</a>
+            <a class="btn" href="#research">Explore Research</a>
+            <a class="btn btn--secondary" href="#data">View Datasets</a>
           </div>
         </div>
 
@@ -57,62 +55,283 @@
       </div>
     </section>
 
-    <!-- Optional (recommended): a short About teaser on the homepage -->
-    <section aria-labelledby="about-teaser-title">
-      <h2 class="section-title" id="about-teaser-title">About</h2>
+    <section aria-labelledby="about-title" id="about">
+      <h2 class="section-title" id="about-title">Research Overview</h2>
+
       <p class="lead">
-        Machine learning and graph-based methods for extracting quantitative structural and microstructural insight
-        from diffraction and microscopy data.
+        This research program investigates how modern machine learning and graph-based methods can be used
+        to extract quantitative structural and microstructural information from diffraction and microscopy
+        data in materials science.
       </p>
-      <p class="muted">
-        <a class="btn btn--secondary" href="about.html">Read the full overview</a>
+
+      <p>
+        Across multiple projects, deep learning models were developed to interpret X-ray diffraction (XRD)
+        patterns for tasks including quantitative phase analysis, crystal structure and space-group
+        classification, and multiphase composition regression, with careful benchmarking against expert
+        studies and large simulated datasets.
+      </p>
+
+      <p>
+        Complementary work explored hybrid CNN–transformer architectures, multitask learning, and synthetic
+        data generation pipelines to address challenges of scalability, generalization, and reproducibility.
+      </p>
+
+      <p>
+        Beyond diffraction, graph-based representations of microstructure were developed to track grains
+        across deformation steps and to model grain-scale mechanical responses using graph neural networks,
+        integrating neighborhood topology, crystallography, and experimental measurements.
+      </p>
+
+      <p>
+        Together, these projects demonstrate a unified approach to materials characterization that combines
+        physics-informed simulation, high-performance computing, and data-driven models to move from raw
+        experimental signals to interpretable, quantitative descriptions of structure and evolution in
+        complex materials systems.
       </p>
     </section>
 
-    <!-- Key Research Areas (homepage preview) -->
-    <section aria-labelledby="research-title">
-      <h2 class="section-title" id="research-title">Key Research Areas</h2>
+    <section aria-labelledby="projects-title" id="research">
+      <h2 class="section-title" id="projects-title">Research</h2>
 
-      <div class="grid">
-        <article class="card">
-          <div class="card__thumb">
-            <img src="assets/microstructure_analysis.png" alt="Microstructure analysis imagery" />
+      <div class="project-grid">
+        <!-- 1) GNN for Grain Track -->
+        <article class="project-card project-card--row"
+                 data-href="https://github.com/Machine-Intelligence-Characterisation/GNN-for-Grain-Track"
+                 role="link" tabindex="0"
+                 aria-label="Open repository: GNN for Grain Track">
+          <div class="project-card__body">
+            <h3 class="project-card__title">
+              <a href="https://github.com/Machine-Intelligence-Characterisation/GNN-for-Grain-Track" target="_blank" rel="noreferrer">
+                GNN for Grain Track
+              </a>
+            </h3>
+
+            <p class="project-card__summary">
+              Notebook-driven graph neural network workflows for modelling grain-scale responses using both a demo TGNN
+              dataset (Hu et al., 2024) and experimental grain neighbourhood measurements. Builds PyTorch Geometric graphs
+              and evaluates predicted responses across strain increments.
+            </p>
+
+            <div class="project-card__meta" aria-label="Tags">
+              <span class="chip">GNN</span>
+              <span class="chip">PyTorch Geometric</span>
+              <span class="chip">Strain paths</span>
+              <span class="chip">Experimental</span>
+            </div>
+
+            <div class="project-card__actions">
+              <a class="btn btn--secondary"
+                 href="https://github.com/Machine-Intelligence-Characterisation/GNN-for-Grain-Track"
+                 target="_blank" rel="noreferrer">
+                View repository
+              </a>
+            </div>
           </div>
-          <div class="card__body">
-            <h3 class="card__title">Microstructure Analysis</h3>
-            <p class="muted">Segmentation, denoising and metrics for microscopy and diffraction.</p>
+
+          <div class="project-card__thumb" aria-hidden="true">
+            <img src="assets/MIC.png" alt="Placeholder image for GNN for Grain Track" />
           </div>
         </article>
 
-        <article class="card">
-          <div class="card__thumb">
-            <img src="assets/predictive_modelling.png" alt="Predictive modelling visualization" />
+        <!-- 2) Grain Track -->
+        <article class="project-card project-card--row"
+                 data-href="https://github.com/Machine-Intelligence-Characterisation/grain-track"
+                 role="link" tabindex="0"
+                 aria-label="Open repository: Grain Track">
+          <div class="project-card__body">
+            <h3 class="project-card__title">
+              <a href="https://github.com/Machine-Intelligence-Characterisation/grain-track" target="_blank" rel="noreferrer">
+                Grain Track
+              </a>
+            </h3>
+
+            <p class="project-card__summary">
+              Tools and data for tracking microstructural grains across deformation or processing steps.
+              Provides a lightweight Python package for grain-map operations and tracking, plus scripts that merge
+              per-step results and build directed lineage graphs for downstream analysis.
+            </p>
+
+            <div class="project-card__meta" aria-label="Tags">
+              <span class="chip">EBSD/DIC</span>
+              <span class="chip">Microstructure</span>
+              <span class="chip">Tracking</span>
+              <span class="chip">Graphs</span>
+            </div>
+
+            <div class="project-card__actions">
+              <a class="btn btn--secondary"
+                 href="https://github.com/Machine-Intelligence-Characterisation/grain-track"
+                 target="_blank" rel="noreferrer">
+                View repository
+              </a>
+            </div>
           </div>
-          <div class="card__body">
-            <h3 class="card__title">Predictive Modelling</h3>
-            <p class="muted">From descriptors to surrogates and uncertainty across scales.</p>
+
+          <div class="project-card__thumb" aria-hidden="true">
+            <img src="assets/MIC.png" alt="Placeholder image for Grain Track" />
           </div>
         </article>
 
-        <article class="card">
-          <div class="card__thumb">
-            <img src="assets/automated_classification.png" alt="Automated classification visualization" />
+        <!-- 3) ML for XRD Quantitative Phase Analysis -->
+        <article class="project-card project-card--row"
+                 data-href="https://github.com/Machine-Intelligence-Characterisation/ML-for-XRD-phase-analysis"
+                 role="link" tabindex="0"
+                 aria-label="Open repository: ML for XRD Quantitative Phase Analysis">
+          <div class="project-card__body">
+            <h3 class="project-card__title">
+              <a href="https://github.com/Machine-Intelligence-Characterisation/ML-for-XRD-phase-analysis" target="_blank" rel="noreferrer">
+                ML for XRD Quantitative Phase Analysis
+              </a>
+            </h3>
+
+            <p class="project-card__summary">
+              Training and evaluation pipeline for quantitative phase analysis (QPA) from XRD intensity patterns.
+              Models are trained on synthetic mixtures and benchmarked against the Madsen (2001) round-robin expert dataset
+              for three-phase weight-fraction prediction.
+            </p>
+
+            <div class="project-card__meta" aria-label="Tags">
+              <span class="chip">XRD</span>
+              <span class="chip">Regression</span>
+              <span class="chip">Benchmark</span>
+              <span class="chip">PyTorch</span>
+            </div>
+
+            <div class="project-card__actions">
+              <a class="btn btn--secondary"
+                 href="https://github.com/Machine-Intelligence-Characterisation/ML-for-XRD-phase-analysis"
+                 target="_blank" rel="noreferrer">
+                View repository
+              </a>
+            </div>
           </div>
-          <div class="card__body">
-            <h3 class="card__title">Automated Classification</h3>
-            <p class="muted">Self-supervised and active learning for domain-specific labelling.</p>
+
+          <div class="project-card__thumb" aria-hidden="true">
+            <img src="assets/MIC.png" alt="Placeholder image for XRD quantitative phase analysis" />
           </div>
         </article>
-      </div>
 
-      <!-- Optional: link through to the dedicated page -->
-      <div class="cta">
-        <a class="btn btn--secondary" href="research.html">See all research</a>
+        <!-- 4) CPICANN Phase Classification -->
+        <article class="project-card project-card--row"
+                 data-href="https://github.com/Machine-Intelligence-Characterisation/ML-for-CPICANN-phase-analysis"
+                 role="link" tabindex="0"
+                 aria-label="Open repository: CPICANN Phase Classification">
+          <div class="project-card__body">
+            <h3 class="project-card__title">
+              <a href="https://github.com/Machine-Intelligence-Characterisation/ML-for-CPICANN-phase-analysis" target="_blank" rel="noreferrer">
+                CPICANN Phase Classification
+              </a>
+            </h3>
+
+            <p class="project-card__summary">
+              Training + validation workflows for crystal structure/phase classification from XRD using CNN,
+              attention-only (ViT-style), and CPICANN hybrid architectures. Includes quick validation scripts and
+              Monash M3 SLURM training pipelines.
+            </p>
+
+            <div class="project-card__meta" aria-label="Tags">
+              <span class="chip">XRD</span>
+              <span class="chip">Classification</span>
+              <span class="chip">CNN–Transformer</span>
+              <span class="chip">HPC</span>
+            </div>
+
+            <div class="project-card__actions">
+              <a class="btn btn--secondary"
+                 href="https://github.com/Machine-Intelligence-Characterisation/ML-for-CPICANN-phase-analysis"
+                 target="_blank" rel="noreferrer">
+                View repository
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card__thumb" aria-hidden="true">
+            <img src="assets/MIC.png" alt="Placeholder image for CPICANN phase classification" />
+          </div>
+        </article>
+
+        <!-- 5) XRD Space-Group Analysis -->
+        <article class="project-card project-card--row"
+                 data-href="https://github.com/Machine-Intelligence-Characterisation/ML-for-XRD-SPG-analysis"
+                 role="link" tabindex="0"
+                 aria-label="Open repository: XRD Space-Group Analysis">
+          <div class="project-card__body">
+            <h3 class="project-card__title">
+              <a href="https://github.com/Machine-Intelligence-Characterisation/ML-for-XRD-SPG-analysis" target="_blank" rel="noreferrer">
+                XRD Space-Group Analysis
+              </a>
+            </h3>
+
+            <p class="project-card__summary">
+              Deep-learning workspace for predicting crystallographic properties directly from simulated XRD spectra.
+              Supports single-task space-group prediction and multi-task learning (space group, crystal system,
+              Bravais lattice type, and elemental composition), with WANDB tracking and HPC helpers.
+            </p>
+
+            <div class="project-card__meta" aria-label="Tags">
+              <span class="chip">XRD</span>
+              <span class="chip">Space groups</span>
+              <span class="chip">Multitask</span>
+              <span class="chip">WANDB</span>
+            </div>
+
+            <div class="project-card__actions">
+              <a class="btn btn--secondary"
+                 href="https://github.com/Machine-Intelligence-Characterisation/ML-for-XRD-SPG-analysis"
+                 target="_blank" rel="noreferrer">
+                View repository
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card__thumb" aria-hidden="true">
+            <img src="assets/MIC.png" alt="Placeholder image for XRD space-group analysis" />
+          </div>
+        </article>
+
+        <!-- 6) XRD Phase Analysis (Semester 2, 2025) -->
+        <article class="project-card project-card--row"
+                 data-href="https://github.com/Machine-Intelligence-Characterisation/ML-for-XRD-phase-analysis-2025sem2"
+                 role="link" tabindex="0"
+                 aria-label="Open repository: XRD Phase Analysis (Semester 2, 2025)">
+          <div class="project-card__body">
+            <h3 class="project-card__title">
+              <a href="https://github.com/Machine-Intelligence-Characterisation/ML-for-XRD-phase-analysis-2025sem2" target="_blank" rel="noreferrer">
+                XRD Phase Analysis (Semester 2, 2025)
+              </a>
+            </h3>
+
+            <p class="project-card__summary">
+              End-to-end tooling to synthesize multiphase XRD mixtures, train CNN regressors/multitask models to recover
+              phase fractions, and analyze experiments locally or on HPC. Includes data generation scripts and documented
+              failure modes + next-step improvements.
+            </p>
+
+            <div class="project-card__meta" aria-label="Tags">
+              <span class="chip">Synthetic data</span>
+              <span class="chip">Multiphase</span>
+              <span class="chip">CNN</span>
+              <span class="chip">Diagnostics</span>
+            </div>
+
+            <div class="project-card__actions">
+              <a class="btn btn--secondary"
+                 href="https://github.com/Machine-Intelligence-Characterisation/ML-for-XRD-phase-analysis-2025sem2"
+                 target="_blank" rel="noreferrer">
+                View repository
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card__thumb" aria-hidden="true">
+            <img src="assets/MIC.png" alt="Placeholder image for XRD phase analysis (Semester 2, 2025)" />
+          </div>
+        </article>
       </div>
     </section>
 
     <!-- Featured Data & Insights (homepage preview) -->
-    <section aria-labelledby="data-title">
+    <section aria-labelledby="data-title" id="data">
       <h2 class="section-title" id="data-title">Featured Data &amp; Insights</h2>
 
       <div class="two-col">
@@ -143,9 +362,18 @@
 
       <!-- Optional: link through to the dedicated page -->
       <div class="cta">
-        <a class="btn btn--secondary" href="data.html">Browse datasets</a>
+        <a class="btn btn--secondary" href="#data">Browse datasets</a>
       </div>
     </section>
+    <!-- Contact -->
+    <section aria-labelledby="contact-title" id="contact">
+      <h2 class="section-title" id="contact-title">Contact</h2>
+      <p class="lead">Get in touch for collaboration, questions, or contributions.</p>
+      <p class="muted">
+        Email: <a href="mailto:machine-intelligence-characterisation@example.com">machine-intelligence-characterisation@example.com</a>
+      </p>
+    </section>
+
   </main>
 
   <!-- ========== FOOTER ========== -->
@@ -153,14 +381,34 @@
     <div class="foot">
       <span class="tiny">© <span id="y"></span> Machine Intelligence Characterisation</span>
       <span class="tiny">
-        <a href="about.html">About</a> ·
-        <a href="publications.html">Publications</a> ·
-        <a href="contact.html">Contact</a>
+        <a href="#about">About</a> ·
+        <a href="#contact">Contact</a>
       </span>
     </div>
   </footer>
 
   <script>
+    // Make entire project cards clickable while keeping inner links/buttons working.
+    (function () {
+      const cards = document.querySelectorAll('.project-card[data-href]');
+      cards.forEach((card) => {
+        const url = card.dataset.href;
+
+        card.addEventListener('click', (e) => {
+          if (e.target.closest('a, button, input, textarea, select, label')) return;
+          window.open(url, '_blank', 'noopener');
+        });
+
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            window.open(url, '_blank', 'noopener');
+          }
+        });
+      });
+    })();
+
+    // Footer year
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
