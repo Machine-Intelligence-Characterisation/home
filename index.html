@@ -62,24 +62,14 @@
       <h2 class="section-title" id="about-title">About</h2>
 
       <p class="lead">
-        Machine Intelligence for Characterisation (MIC) is a Monash University (Australia) initiative bringing together
-        undergraduate students, PhD candidates, and research fellows to develop learning-based tools for materials
-        characterisation. The program focuses on harnessing and extending Monash’s characterisation infrastructure by building
-        reproducible, data-driven workflows that translate diffraction and microscopy measurements into quantitative
-        microstructural and crystallographic descriptors. MIC is closely aligned with facilities including the Monash Centre
-        for Electron Microscopy and the Monash X-ray Platform, with projects spanning automated phase and crystal-structure
-        classification from X-ray diffraction, composition and phase-fraction regression using synthetic and benchmark
-        datasets, and microstructure intelligence using graph representations for grain neighbourhood analysis, grain tracking
-        across deformation steps, and grain-scale response modelling. Across these streams, we combine physics-informed
-        simulation, high-performance computing, and modern machine learning (including deep learning and graph neural
-        networks) to deliver scalable pipelines, open code, and clear validation, with the practical goal of accelerating
-        characterisation while preserving scientific rigour.
+        Machine Intelligence for Characterisation (MIC) brings together undergraduate students, PhD candidates, and research fellows at Monash University, Australia, to develop learning-based tools for materials characterisation. MIC harnesses and extends Monash’s characterisation infrastructure by building data-driven workflows that translate diffraction and microscopy measurements into quantitative microstructural and crystallographic descriptors. We acknowledge the data, facility, and computational support of the Monash Centre for Electron Microscopy, the Monash X-ray Platform, and Monash High Performance Computing.
+
       </p>
     </section>
 
     <!-- Research -->
     <section aria-labelledby="projects-title" id="research">
-      <h2 class="section-title" id="projects-title">Research</h2>
+      <h2 class="section-title" id="projects-title">Projects</h2>
 
       <div class="project-grid">
         <!-- 1) GNN for Grain Track -->
@@ -123,20 +113,18 @@
 
         <!-- 2) Grain Track -->
         <article class="project-card project-card--row"
-                 data-href="https://github.com/Machine-Intelligence-Characterisation/grain-track"
+                 data-href="https://github.com/Machine-Intelligence-Characterisation/grain-track-EBSD-DIC.git"
                  role="link" tabindex="0"
                  aria-label="Open repository: Grain Track">
           <div class="project-card__body">
             <h3 class="project-card__title">
-              <a href="https://github.com/Machine-Intelligence-Characterisation/grain-track" target="_blank" rel="noopener noreferrer">
-                Grain Track
+              <a href="https://github.com/Machine-Intelligence-Characterisation/grain-track-EBSD-DIC.git" target="_blank" rel="noopener noreferrer">
+                Grain Track: EBSD-DIC dataset
               </a>
             </h3>
 
             <p class="project-card__summary">
-              Tools and data for tracking microstructural grains across deformation or processing steps.
-              Provides a lightweight Python package for grain-map operations and tracking, plus scripts that merge
-              per-step results and build directed lineage graphs for downstream analysis.
+              This repository focuses on tracking microstructural grains across deformation or processing steps using EBSD/DIC data. It consolidates per-step grain property measurements, constructs directed lineage graphs that link grains between steps, and supports visualization and modeling workflows. The included datasets and notebooks capture preprocessing, regression analysis, and step-to-step tracking results for grain evolution studies.
             </p>
 
             <div class="project-card__meta" aria-label="Tags">
@@ -148,7 +136,7 @@
 
             <div class="project-card__actions">
               <a class="btn btn--secondary"
-                 href="https://github.com/Machine-Intelligence-Characterisation/grain-track"
+                 href="https://github.com/Machine-Intelligence-Characterisation/grain-track-EBSD-DIC.git"
                  target="_blank" rel="noopener noreferrer">
                 View repository
               </a>
@@ -156,9 +144,13 @@
           </div>
 
           <div class="project-card__thumb" aria-hidden="true">
-            <img src="assets/MIC.png" alt="Placeholder image for Grain Track" />
+            <img src="assets/grain-track-EBSD-DIC.png" alt="Placeholder image for Grain Track" />
           </div>
         </article>
+
+
+
+
 
         <!-- 3) ML for XRD Quantitative Phase Analysis -->
         <article class="project-card project-card--row"
