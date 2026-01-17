@@ -5,20 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Machine Intelligence for Characterisation</title>
   <meta name="description" content="Advancing machine intelligence for characterisation: microstructure analysis, predictive modelling, and automated classification.">
-  <link rel="icon" href="assets/MIC.png">
+  <link rel="icon" href="assets/MIC_icon.png">
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 
 <body class="page-home">
+  <a class="skip-link" href="#home">Skip to content</a>
+
   <!-- ========== NAV ========== -->
   <header class="nav">
     <div class="container nav__inner">
-      <a href="index.html" class="brand">
+      <a href="index.html" class="brand" aria-label="Go to homepage">
         <img src="assets/MIC.png" width="32" height="32" alt="MIC logo" class="brand__logo" />
         <span class="brand__name">Intelligence</span>
       </a>
 
-      <!-- Updated: multi-page nav (no #anchors) -->
       <nav class="links" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#research">Projects</a>
@@ -39,7 +40,6 @@
             Advancing the understanding of materials science by turning characterisation workflows into learning-based analysis.
           </p>
 
-          <!-- Updated: CTAs now point to pages -->
           <div class="cta">
             <a class="btn" href="#research">Explore Projects</a>
             <a class="btn btn--secondary"
@@ -49,54 +49,36 @@
               View GitHub Repo
             </a>
           </div>
-
-
-
-          
         </div>
 
-        <!-- RIGHT: large logo image (no visible edge) -->
-        <div class="logo-art">
+        <!-- RIGHT: large logo image -->
+        <div class="logo-art" aria-hidden="true">
           <img src="assets/MIC.png" alt="Abstract crystalline structure logo" />
         </div>
       </div>
     </section>
 
+    <!-- About -->
     <section aria-labelledby="about-title" id="about">
       <h2 class="section-title" id="about-title">About</h2>
 
       <p class="lead">
-        This research program investigates how modern machine learning and graph-based methods can be used
-        to extract quantitative structural and microstructural information from diffraction and microscopy
-        data in materials science.
+        Machine Intelligence for Characterisation (MIC) is a Monash University (Australia) initiative bringing together
+        undergraduate students, PhD candidates, and research fellows to develop learning-based tools for materials
+        characterisation. The program focuses on harnessing and extending Monash’s characterisation infrastructure by building
+        reproducible, data-driven workflows that translate diffraction and microscopy measurements into quantitative
+        microstructural and crystallographic descriptors. MIC is closely aligned with facilities including the Monash Centre
+        for Electron Microscopy and the Monash X-ray Platform, with projects spanning automated phase and crystal-structure
+        classification from X-ray diffraction, composition and phase-fraction regression using synthetic and benchmark
+        datasets, and microstructure intelligence using graph representations for grain neighbourhood analysis, grain tracking
+        across deformation steps, and grain-scale response modelling. Across these streams, we combine physics-informed
+        simulation, high-performance computing, and modern machine learning (including deep learning and graph neural
+        networks) to deliver scalable pipelines, open code, and clear validation, with the practical goal of accelerating
+        characterisation while preserving scientific rigour.
       </p>
-
-      <!-- <p>
-        Across multiple projects, deep learning models were developed to interpret X-ray diffraction (XRD)
-        patterns for tasks including quantitative phase analysis, crystal structure and space-group
-        classification, and multiphase composition regression, with careful benchmarking against expert
-        studies and large simulated datasets.
-      </p>
-
-      <p>
-        Complementary work explored hybrid CNN-transformer architectures, multitask learning, and synthetic
-        data generation pipelines to address challenges of scalability, generalization, and reproducibility.
-      </p>
-
-      <p>
-        Beyond diffraction, graph-based representations of microstructure were developed to track grains
-        across deformation steps and to model grain-scale mechanical responses using graph neural networks,
-        integrating neighborhood topology, crystallography, and experimental measurements.
-      </p>
-
-      <p>
-        Together, these projects demonstrate a unified approach to materials characterization that combines
-        physics-informed simulation, high-performance computing, and data-driven models to move from raw
-        experimental signals to interpretable, quantitative descriptions of structure and evolution in
-        complex materials systems.
-      </p> -->
     </section>
 
+    <!-- Research -->
     <section aria-labelledby="projects-title" id="research">
       <h2 class="section-title" id="projects-title">Research</h2>
 
@@ -342,10 +324,12 @@
       <h2 class="section-title" id="contact-title">Contact</h2>
       <p class="lead">Get in touch for collaboration, questions, or contributions.</p>
       <p class="muted">
-        Email: <a href="mailto:machine-intelligence-characterisation@example.com">machine-intelligence-characterisation@example.com</a>
+        Email:
+        <a href="mailto:machine-intelligence-characterisation@example.com">
+          machine-intelligence-characterisation@example.com
+        </a>
       </p>
     </section>
-
   </main>
 
   <!-- ========== FOOTER ========== -->
@@ -388,7 +372,7 @@
         }
       });
 
-      // Footer year (safe guard).
+      // Footer year.
       const yearEl = document.getElementById('y');
       if (yearEl) yearEl.textContent = String(new Date().getFullYear());
     })();
