@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Machine Intelligence for Characterisation</title>
   <meta name="description" content="Advancing machine intelligence for characterisation: microstructure analysis, predictive modelling, and automated classification.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%2309f%22/></svg>">
+  <link rel="icon" href="assets/MIC.png">
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 
@@ -18,11 +18,10 @@
         <span class="brand__name">Intelligence</span>
       </a>
 
-
       <!-- Updated: multi-page nav (no #anchors) -->
       <nav class="links" aria-label="Primary">
         <a href="#about">About</a>
-        <a href="#research">Research</a>
+        <a href="#research">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -35,17 +34,25 @@
       <div class="masthead__grid">
         <!-- LEFT: text -->
         <div class="masthead__content">
-          <span class="tag">Open community • Materials AI</span>
           <h1>Machine Intelligence for Characterisation</h1>
           <p class="lead">
-            Advancing the understanding of microstructure through robust models, reproducible data and open tooling.
+            Advancing the understanding of materials science by turning characterisation workflows into learning-based analysis.
           </p>
 
           <!-- Updated: CTAs now point to pages -->
           <div class="cta">
-            <a class="btn" href="#research">Explore Research</a>
-            <a class="btn btn--secondary" href="#data">View Datasets</a>
+            <a class="btn" href="#research">Explore Projects</a>
+            <a class="btn btn--secondary"
+               href="https://github.com/Machine-Intelligence-Characterisation"
+               target="_blank"
+               rel="noopener noreferrer">
+              View GitHub Repo
+            </a>
           </div>
+
+
+
+          
         </div>
 
         <!-- RIGHT: large logo image (no visible edge) -->
@@ -56,7 +63,7 @@
     </section>
 
     <section aria-labelledby="about-title" id="about">
-      <h2 class="section-title" id="about-title">Research Overview</h2>
+      <h2 class="section-title" id="about-title">About</h2>
 
       <p class="lead">
         This research program investigates how modern machine learning and graph-based methods can be used
@@ -64,7 +71,7 @@
         data in materials science.
       </p>
 
-      <p>
+      <!-- <p>
         Across multiple projects, deep learning models were developed to interpret X-ray diffraction (XRD)
         patterns for tasks including quantitative phase analysis, crystal structure and space-group
         classification, and multiphase composition regression, with careful benchmarking against expert
@@ -72,7 +79,7 @@
       </p>
 
       <p>
-        Complementary work explored hybrid CNN–transformer architectures, multitask learning, and synthetic
+        Complementary work explored hybrid CNN-transformer architectures, multitask learning, and synthetic
         data generation pipelines to address challenges of scalability, generalization, and reproducibility.
       </p>
 
@@ -87,7 +94,7 @@
         physics-informed simulation, high-performance computing, and data-driven models to move from raw
         experimental signals to interpretable, quantitative descriptions of structure and evolution in
         complex materials systems.
-      </p>
+      </p> -->
     </section>
 
     <section aria-labelledby="projects-title" id="research">
@@ -101,7 +108,7 @@
                  aria-label="Open repository: GNN for Grain Track">
           <div class="project-card__body">
             <h3 class="project-card__title">
-              <a href="https://github.com/Machine-Intelligence-Characterisation/GNN-for-Grain-Track" target="_blank" rel="noreferrer">
+              <a href="https://github.com/Machine-Intelligence-Characterisation/GNN-for-Grain-Track" target="_blank" rel="noopener noreferrer">
                 GNN for Grain Track
               </a>
             </h3>
@@ -122,7 +129,7 @@
             <div class="project-card__actions">
               <a class="btn btn--secondary"
                  href="https://github.com/Machine-Intelligence-Characterisation/GNN-for-Grain-Track"
-                 target="_blank" rel="noreferrer">
+                 target="_blank" rel="noopener noreferrer">
                 View repository
               </a>
             </div>
@@ -140,7 +147,7 @@
                  aria-label="Open repository: Grain Track">
           <div class="project-card__body">
             <h3 class="project-card__title">
-              <a href="https://github.com/Machine-Intelligence-Characterisation/grain-track" target="_blank" rel="noreferrer">
+              <a href="https://github.com/Machine-Intelligence-Characterisation/grain-track" target="_blank" rel="noopener noreferrer">
                 Grain Track
               </a>
             </h3>
@@ -161,7 +168,7 @@
             <div class="project-card__actions">
               <a class="btn btn--secondary"
                  href="https://github.com/Machine-Intelligence-Characterisation/grain-track"
-                 target="_blank" rel="noreferrer">
+                 target="_blank" rel="noopener noreferrer">
                 View repository
               </a>
             </div>
@@ -179,7 +186,7 @@
                  aria-label="Open repository: ML for XRD Quantitative Phase Analysis">
           <div class="project-card__body">
             <h3 class="project-card__title">
-              <a href="https://github.com/Machine-Intelligence-Characterisation/ML-for-XRD-phase-analysis" target="_blank" rel="noreferrer">
+              <a href="https://github.com/Machine-Intelligence-Characterisation/ML-for-XRD-phase-analysis" target="_blank" rel="noopener noreferrer">
                 ML for XRD Quantitative Phase Analysis
               </a>
             </h3>
@@ -200,7 +207,7 @@
             <div class="project-card__actions">
               <a class="btn btn--secondary"
                  href="https://github.com/Machine-Intelligence-Characterisation/ML-for-XRD-phase-analysis"
-                 target="_blank" rel="noreferrer">
+                 target="_blank" rel="noopener noreferrer">
                 View repository
               </a>
             </div>
@@ -218,7 +225,7 @@
                  aria-label="Open repository: CPICANN Phase Classification">
           <div class="project-card__body">
             <h3 class="project-card__title">
-              <a href="https://github.com/Machine-Intelligence-Characterisation/ML-for-CPICANN-phase-analysis" target="_blank" rel="noreferrer">
+              <a href="https://github.com/Machine-Intelligence-Characterisation/ML-for-CPICANN-phase-analysis" target="_blank" rel="noopener noreferrer">
                 CPICANN Phase Classification
               </a>
             </h3>
@@ -232,14 +239,14 @@
             <div class="project-card__meta" aria-label="Tags">
               <span class="chip">XRD</span>
               <span class="chip">Classification</span>
-              <span class="chip">CNN–Transformer</span>
+              <span class="chip">CNN-Transformer</span>
               <span class="chip">HPC</span>
             </div>
 
             <div class="project-card__actions">
               <a class="btn btn--secondary"
                  href="https://github.com/Machine-Intelligence-Characterisation/ML-for-CPICANN-phase-analysis"
-                 target="_blank" rel="noreferrer">
+                 target="_blank" rel="noopener noreferrer">
                 View repository
               </a>
             </div>
@@ -257,7 +264,7 @@
                  aria-label="Open repository: XRD Space-Group Analysis">
           <div class="project-card__body">
             <h3 class="project-card__title">
-              <a href="https://github.com/Machine-Intelligence-Characterisation/ML-for-XRD-SPG-analysis" target="_blank" rel="noreferrer">
+              <a href="https://github.com/Machine-Intelligence-Characterisation/ML-for-XRD-SPG-analysis" target="_blank" rel="noopener noreferrer">
                 XRD Space-Group Analysis
               </a>
             </h3>
@@ -278,7 +285,7 @@
             <div class="project-card__actions">
               <a class="btn btn--secondary"
                  href="https://github.com/Machine-Intelligence-Characterisation/ML-for-XRD-SPG-analysis"
-                 target="_blank" rel="noreferrer">
+                 target="_blank" rel="noopener noreferrer">
                 View repository
               </a>
             </div>
@@ -296,7 +303,7 @@
                  aria-label="Open repository: XRD Phase Analysis (Semester 2, 2025)">
           <div class="project-card__body">
             <h3 class="project-card__title">
-              <a href="https://github.com/Machine-Intelligence-Characterisation/ML-for-XRD-phase-analysis-2025sem2" target="_blank" rel="noreferrer">
+              <a href="https://github.com/Machine-Intelligence-Characterisation/ML-for-XRD-phase-analysis-2025sem2" target="_blank" rel="noopener noreferrer">
                 XRD Phase Analysis (Semester 2, 2025)
               </a>
             </h3>
@@ -317,7 +324,7 @@
             <div class="project-card__actions">
               <a class="btn btn--secondary"
                  href="https://github.com/Machine-Intelligence-Characterisation/ML-for-XRD-phase-analysis-2025sem2"
-                 target="_blank" rel="noreferrer">
+                 target="_blank" rel="noopener noreferrer">
                 View repository
               </a>
             </div>
@@ -329,7 +336,7 @@
         </article>
       </div>
     </section>
-    </section>
+
     <!-- Contact -->
     <section aria-labelledby="contact-title" id="contact">
       <h2 class="section-title" id="contact-title">Contact</h2>
@@ -353,28 +360,38 @@
   </footer>
 
   <script>
-    // Make entire project cards clickable while keeping inner links/buttons working.
     (function () {
-      const cards = document.querySelectorAll('.project-card[data-href]');
-      cards.forEach((card) => {
+      // Clickable project cards (event delegation).
+      const interactiveSelector = 'a, button, input, textarea, select, label';
+      const cardSelector = '.project-card[data-href]';
+
+      document.addEventListener('click', (e) => {
+        if (e.target.closest(interactiveSelector)) return;
+        const card = e.target.closest(cardSelector);
+        if (!card) return;
+
         const url = card.dataset.href;
+        if (!url) return;
 
-        card.addEventListener('click', (e) => {
-          if (e.target.closest('a, button, input, textarea, select, label')) return;
-          window.open(url, '_blank', 'noopener');
-        });
-
-        card.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            window.open(url, '_blank', 'noopener');
-          }
-        });
+        window.open(url, '_blank', 'noopener');
       });
-    })();
 
-    // Footer year
-    document.getElementById('y').textContent = new Date().getFullYear();
+      document.addEventListener('keydown', (e) => {
+        const card = e.target.closest(cardSelector);
+        if (!card) return;
+
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          const url = card.dataset.href;
+          if (!url) return;
+          window.open(url, '_blank', 'noopener');
+        }
+      });
+
+      // Footer year (safe guard).
+      const yearEl = document.getElementById('y');
+      if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+    })();
   </script>
 </body>
 </html>
