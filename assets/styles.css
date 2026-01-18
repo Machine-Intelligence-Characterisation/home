@@ -1,18 +1,8 @@
 /* ==========================================================================
-   MIC Website Stylesheet (Complete, No Bottom Gap Thumbnails)
-   --------------------------------------------------------------------------
-   Guarantees:
-   - Pure black background
-   - Floating hero image (no box)
-   - Project cards:
-     * Left thumbnail column is responsive width (not fixed px)
-     * Thumbnail image fills the entire left column height (no bottom gap)
-     * Left column always reaches card bottom (grid stretch)
-     * Full summary text is shown (no clamp)
+   MIC Website Stylesheet (Complete, No Bottom Gap Thumbnails + Stretched Link)
    ========================================================================== */
 
    :root{
-    /* Colors */
     --bg: #000;
     --text: rgba(255,255,255,.92);
     --muted: rgba(255,255,255,.68);
@@ -21,26 +11,19 @@
     --primary: #6ee7ff;
     --primary-2: #8b5cf6;
   
-    /* Surfaces */
     --panel: rgba(255,255,255,.06);
     --panel-2: rgba(255,255,255,.09);
     --border: rgba(255,255,255,.12);
   
-    /* Layout */
     --container: 1120px;
     --radius: 18px;
   
-    /* Responsive thumbnail column width */
     --thumb-col: clamp(180px, 22vw, 280px);
-  
-    /* Minimum height for cards so the thumb has a real area to fill */
     --card-min-h: 220px;
   
-    /* Shadows */
     --shadow: 0 14px 50px rgba(0,0,0,.45);
     --shadow-soft: 0 10px 30px rgba(0,0,0,.28);
   
-    /* Typography */
     --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   }
   
@@ -248,7 +231,6 @@
     margin-top: 16px;
   }
   
-  /* Floating hero image (no box) */
   .logo-art{
     display: flex;
     align-items: center;
@@ -290,7 +272,7 @@
   section{ padding: 20px 0; }
   
   /* ==========================================================================
-     PROJECT GRID + CARDS (no bottom gap)
+     PROJECT GRID + CARDS (no bottom gap + stretched link)
      ========================================================================== */
   .project-grid{
     display: grid;
@@ -307,6 +289,7 @@
     overflow: hidden;
     position: relative;
     transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
+    cursor: pointer; /* visual cue */
   }
   
   .project-card::before{
@@ -334,8 +317,6 @@
     grid-template-areas: "thumb body";
     align-items: stretch;
     gap: 0;
-  
-    /* Gives the image a guaranteed height to fill, while still allowing growth */
     min-height: var(--card-min-h);
   }
   
@@ -347,28 +328,55 @@
     overflow: hidden;
     border-right: 1px solid rgba(255,255,255,.10);
     background: rgba(255,255,255,.03);
-  
-    /* make sure the image can fill the entire column height */
     position: relative;
   }
   
   .project-card__thumb img{
-    /* This is the key: fill the whole left column, no gap at bottom */
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* no bottom gap */
     display: block;
     opacity: 1;
     filter: none;
   }
   
+  /* Body */
   .project-card__body{
     padding: 18px 18px 16px;
-    position: relative;
+    position: relative; /* required for stretched link positioning */
     z-index: 1;
-  
     display: flex;
     flex-direction: column;
+  }
+  
+  /* ----------------------------
+     Stretched link overlay (Option B)
+     - Makes the whole text region a real anchor link.
+     - Must sit UNDER the title/button so those remain clickable.
+     ---------------------------- */
+  .stretched-link{
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+  }
+  
+  /* Raise interactive items above the overlay */
+  .project-card__title,
+  .project-card__title a,
+  .project-card__summary,
+  .project-card__meta,
+  .project-card__actions,
+  .project-card__actions a{
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Link cue on hover */
+  .project-card:hover .project-card__title a{
+    color: rgba(110,231,255,.95);
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
   
   .project-card__title{
@@ -376,8 +384,8 @@
     letter-spacing: -0.01em;
     margin-bottom: 6px;
   }
+  
   .project-card__title a{ color: var(--text); }
-  .project-card__title a:hover{ color: rgba(255,255,255,.95); }
   
   .project-card__summary{
     margin: 0;
@@ -399,6 +407,7 @@
     padding-top: 14px;
   }
   
+  /* Keyboard focus */
   .project-card[tabindex="0"]:focus{
     outline: none;
     border-color: rgba(110,231,255,.55);
@@ -451,7 +460,7 @@
     .project-card__thumb{
       border-right: 0;
       border-top: 1px solid rgba(255,255,255,.10);
-      min-height: 240px; /* ensures the image is tall enough on mobile */
+      min-height: 240px;
     }
   
     .foot{
@@ -459,3 +468,4 @@
       align-items: flex-start;
     }
   }
+  
